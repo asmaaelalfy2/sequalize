@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/batchcode" method="POST">
+        <select name="course">
+            {{#each courses as |c|}}
+            <option value="{{c.id}}">{{c.name}}</option>
+            {{/each}}
+        </select>
+        <select name="season">
+            {{#each seasons as |c|}}
+            <option value="{{c.id}}">{{c.name}}</option>
+            {{/each}}
+        </select>
+        <select name="center">
+            {{#each centers as |c|}}
+            <option value="{{c.id}}">{{c.name}}</option>
+            {{/each}}
+        </select>
+        <label>Batch</label>
+        <input name="batch" type="number" />
+        <label>start</label>
+        <input name="start" type="date" />
+        <label>end</label>
+        <input name="end" type="date" />
+        <br />
+        <input type="submit" />
+        <input type="reset" />
+
+    </form>
+
+</body>
+
+</html>
